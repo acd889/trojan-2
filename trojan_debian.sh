@@ -175,8 +175,7 @@ installnginx(){
 }
 #############安装acme#####################
 installacme(){
-  curl -s https://get.acme.sh | sh
-  acme.sh --register-account -m 605722161@qq.com
+  curl -sL https://get.acme.sh | sh -s email=hijk.pw@protonmail.ch
   sudo ~/.acme.sh/acme.sh --upgrade --auto-upgrade > /dev/null
   rm -rf /etc/trojan/
   mkdir /etc/trojan/
